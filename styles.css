@@ -1,0 +1,132 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+html{
+ overflow-x: hidden;
+}
+.header{
+    padding: 1rem 0;
+    margin: 0 auto;
+    width: 85%;
+
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    background: blue;
+}
+.header header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header header .head h1{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.header .nav-bar nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    position: absolute;
+    top: 68px;
+    background-color: grey;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    padding: 20px 0px;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(100%);
+}
+.header .nav-bar nav.nav-toggle{
+    transform: translateX(0%);
+}
+.header .nav-bar nav .nav-list li{
+    list-style: none;
+}
+.header .nav-bar nav .nav-list a{
+    font-size: 3rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+.header .nav-bar .ham{
+    border: 1px solid black;
+    display: inline-block;
+    cursor: pointer;
+    padding: 20px;
+}
+.header .nav-bar .ham .bar{
+    height: 2px;
+    width: 20px;
+    background: black;
+    position: relative;
+    transition: 0.3s all ease-in-out;
+}
+.header .nav-bar .ham .bar::before,
+.header .nav-bar .ham .bar::after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 20px;
+    background: black;
+    transition: all 0.3s ease-in-out;
+
+}
+.header .nav-bar .ham .bar::before{
+    top: -5px;
+    left:0px
+}
+.header .nav-bar .ham .bar::after{
+    bottom: -5px;
+    left: 0px;
+}
+.header .nav-bar .ham.close .bar::before{
+    top: 0px;
+    transform: rotate(45deg);
+
+}
+.header .nav-bar .ham.close .bar::after{
+    top: 0px;
+    transform: rotate(-45deg);
+
+}
+.header .nav-bar .ham.close .bar{
+    background: transparent;
+
+}
+@media(min-width:1024px){
+    .header .nav-bar nav{
+        position: initial;
+        transform: translate(0,0);
+        flex-direction: row;
+        background: transparent;
+        height: auto;
+        width: auto;
+
+    }
+    .header .nav-bar .nav-list {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 0px;
+    }
+    .header .nav-bar .nav-list li{
+        padding: 0px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .header .nav-bar .nav-list li a{
+        color: black;
+        font-size: 1.8rem;
+    }
+    .header .nav-bar .ham{
+        display: none;
+    }
+}
