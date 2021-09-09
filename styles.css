@@ -6,16 +6,23 @@
 html{
     overflow-x: hidden;
 }
-.header{
-    padding: 1rem 0;
-    margin: 0 auto;
-    width: 85%;
-
-}
 .main{
     width: 100vw;
     height: 100vh;
     background: blue;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+
+}
+.header{
+    padding: 1rem 0;
+    margin: 0 auto;
+    width: 85%;
 }
 .header header{
     width: 100%;
