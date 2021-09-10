@@ -51,6 +51,7 @@ html{
     transform: translateX(100%);
 }
 .header .nav-bar nav.nav-toggle{
+
     transform: translateX(0%);
 }
 .header .nav-bar nav .nav-list li{
